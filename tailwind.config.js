@@ -1,63 +1,33 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './page/**/*.{js,ts,jsx,tsx}',
-    './ui/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./app/**/*.{js,ts,jsx,tsx}', './ui/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      // https://vercel.com/design/color
-      colors: {
-        vercel: {
-          pink: '#FF0080',
-          blue: '#0070F3',
-          cyan: '#50E3C2',
-          orange: '#F5A623',
-          violet: '#7928CA',
-        },
+      fontFamily: {
+        satisfy: ['Satisfy'],
       },
-      keyframes: ({ theme }) => ({
-        rerender: {
-          '0%': {
-            'border-color': theme('colors.vercel.pink'),
-          },
-          '40%': {
-            'border-color': theme('colors.vercel.pink'),
-          },
-        },
-        highlight: {
-          '0%': {
-            background: theme('colors.vercel.pink'),
-            color: theme('colors.white'),
-          },
-          '40%': {
-            background: theme('colors.vercel.pink'),
-            color: theme('colors.white'),
-          },
-        },
-        shimmer: {
-          '100%': {
-            transform: 'translateX(100%)',
-          },
-        },
-        translateXReset: {
-          '100%': {
-            transform: 'translateX(0)',
-          },
-        },
-        fadeToTransparent: {
-          '0%': {
-            opacity: 1,
-          },
-          '40%': {
-            opacity: 1,
-          },
-          '100%': {
-            opacity: 0,
-          },
-        },
-      }),
+      fontSize: {
+        logo: ['40px', '60px'],
+      },
+      colors: {
+        primary: '#2196F3',
+        'primary-light': '#E3F2FD',
+        'primary-dark': '#1E88E5',
+        'primary-border': '#90CAF975',
+        secondary: '#73d070',
+        'secondary-light': '#a8eba6',
+        'secondary-dark': '#63b661',
+        'input-border-hover': '#B3B3B3',
+        'input-border-focus': '#2684FF',
+      },
+      boxShadow: {
+        'input-focus': '0 0 0 1px #2684FF',
+      },
+      padding: {
+        '1/2': '50%',
+        full: '100%',
+      },
     },
   },
+  plugins: [],
 };
